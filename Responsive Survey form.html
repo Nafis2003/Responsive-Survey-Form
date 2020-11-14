@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+outline:0;
+box-sizing:border-box;
+}
+
+body{
+background:#fff;
+margin:0 20px;
+font-family:sans-serif;
+font-size:3vw;
+}
+
+header {
+font-weight:bolder;
+padding:24px;
+}
+
+h1,header p{
+text-align:center;
+
+}
+
+h1 {
+font-size:2.5em;
+}
+
+form{
+max-width:800px;
+margin:20px auto;
+border:1px solid #9999ff;
+padding:24px;
+background:#eee;
+border-radius:24px;
+
+box-shadow:8px 4px 20px rgba(0,0,0,0.16),
+           -8px -4px 20px rgba(0,0,0,0.16);
+}
+
+@media (min-width:500px){
+
+body {
+margin:0 50px;
+}
+
+}
+
+.normal input {
+width:100%;
+border:0;
+padding:16px;
+border-radius:16px;
+outline:0;
+margin-bottom:20px;
+box-shadow:2px 2px 10px rgba(0,0,0,0.05),
+           -2px -2px 10px rgba(0,0,0,0.05);
+}
+
+input:focus {
+border:2px solid #9999ff;
+}
+
+.normal label{
+display:block;
+margin-bottom:8px;
+}
+
+textarea {
+width:100%;
+min-height:120px;
+border-radius:24px;
+padding:24px;
+}
+
+button{
+width:100%;
+padding:12px 24px;
+background:linear-gradient(45deg,#cc33ff,red);
+border:0;
+outline:0;
+border-radius:24px;
+text-align:center;
+margin-top:16px;
+margin-bottom:24px;
+box-shadow:4px 4px 20px rgba(0,0,0,0.12),
+           -4px -4px 20px rgba(0,0,0,0.12);
+}
+
+button:hover {
+box-shadow:8px 4px 20px rgba(0,0,0,0.19),
+           -8px -4px 20px rgba(0,0,0,0.19);
+
+}
+
+select {
+margin-top:8px;
+margin-bottom:8px;
+padding:5px 16px;
+border-radius:24px;
+outline:0;
+}
+
+div {
+position:relative;
+margin:20px 0;
+}
+
+
+input[type="checkbox"],input[type="radio"]{
+margin:16px;
+width: 16px;
+height:16px;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<header>
+<h1 id="title" > Survey Form</h1>
+<p id="description">Thanks for taking the time to fill it</p>
+</header>
+
+
+<form id="survey-form" >
+
+<div class="normal">
+<label id="name-label" >Name</label>
+<input id="name" name="name"  type="text" placeholder="Enter your name"  required="required" >
+
+<label id="email-label">Email</label>
+<input id="email"  name="email"  type="email"  placeholder="Enter your email"  required="required" >
+
+<label id="number-label" >Age (Optional)</label>
+<input id="number" name="age"   type="number" min="1" max="100" placeholder="Age"   >
+</div>
+
+
+<div name="dropdown" >
+<p>Your current occupation</p>
+
+<select>
+
+<option disabled="disabled" selected="selected" value="" >Current occupation</option>
+<option value="student">Student</option>
+<option value="job">Full time job</option>
+<option value="learner">Learner</option>
+<option value="noreply">Prefer not to say</option>
+
+</select>
+
+</div>
+
+<div class="radios">
+
+<h4>Would you recommend someone to visit freecodecamp?</h4>
+
+<input name="radio" value="definitely" checked="checked" type="radio"/>
+<label for="definitely">Definitely</label>
+
+<br>
+
+<input name="radio" value="never" type="radio"/>
+<label for="never">Never</label>
+
+<br>
+
+<input name="radio" value="not sure" type="radio"/>
+<label for="not sure">Not sure</label>
+
+</div>
+
+
+<div class="checkbox">
+<h4> What would you like to see improved?</h4>
+
+<label><input type="checkbox" value="front end">Front end</label>
+<br>
+<label><input type="checkbox" value="back end">Back end</label>
+<br>
+<label><input type="checkbox" value="data visualization">Data visualization</label>
+<br>
+<label><input type="checkbox" value="machine learning">Machine learning</label>
+<br>
+<label><input type="checkbox" value="Freecodecamp Community">Freecodecamp Community</label>
+
+
+</div>
+
+<h4>Comments:</h4>
+<textarea></textarea>
+
+<button type="submit" id="submit"  href="#" >Submit</button>
+
+</form>
+
+</body>
+</html>
